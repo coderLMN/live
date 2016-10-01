@@ -1,0 +1,19 @@
+{
+  "name": "LIVE",
+  "version": "0.0.0",
+  "description": "LIVE",
+  "private": true,
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": "",
+  "author": "noone",
+  "dependencies": {
+    "express": "4.10.8",
+    "mongodb": "1.4.22",
+    "body-parser": "1.10.1"
+  },
+  "engines": {
+    "node": "0.12.7"
+  }
+}
