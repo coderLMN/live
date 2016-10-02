@@ -5,7 +5,6 @@ var express = require("express"),
 //var MongoClient = require('mongodb').MongoClient
 //    , ObjectID = require('mongodb').ObjectID;
 var app = express();
-var http = require('http').Server(app);
 var tagsToReplace = {
     '&': '&amp;',
     '<': '&lt;',
@@ -39,13 +38,6 @@ app.get('/', function (req, res) {
     res.redirect('/static/client.html');
 })
 
-var io = require('socket.io')(http);
-
-io.on('connection', function(socket){
-    socket.on('chat message', function(msg){
-        io.emit('chat message', msg);
-    });
-});
 
 //
 //app.get('/start', function(req,res){
