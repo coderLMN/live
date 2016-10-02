@@ -10,7 +10,7 @@
   "author": "noone",
   "dependencies": {
     "express": "4.10.8",
-    "mongodb": "1.4.22",
+//    "mongodb": "1.4.22",
     "body-parser": "1.10.1"
   },
   "engines": {
