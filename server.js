@@ -37,6 +37,15 @@ app.use('/static', express.static(path.join(__dirname,'public')));
 app.get('/', function (req, res) {
     res.redirect('/static/client.html');
 })
+
+var io = require('socket.io')(http);
+
+io.on('connection', function(socket){
+    socket.on('chat message', function(msg){
+        io.emit('chat message', msg);
+    });
+});
+
 //
 //app.get('/start', function(req,res){
 //    res.sendFile('/static/host.html');
