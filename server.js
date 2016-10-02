@@ -1,10 +1,11 @@
 var express = require("express"),
     path = require('path'),
     bodyParser = require('body-parser');
+
 //var MongoClient = require('mongodb').MongoClient
 //    , ObjectID = require('mongodb').ObjectID;
 var app = express();
-
+var http = require('http').Server(app);
 var tagsToReplace = {
     '&': '&amp;',
     '<': '&lt;',
